@@ -1,4 +1,8 @@
-FROM drinternet/rsync:v1.4.0
+FROM alpine:3.14.6
+
+RUN apk update
+
+RUN apk add rsync
 
 # Copy entrypoint
 COPY entrypoint.sh /entrypoint.sh
